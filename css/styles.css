@@ -42,3 +42,7 @@ body{
 .navbar-dark{
     background: #512da8;
 }
+
+.form-group{
+    margin-bottom: 2%;
+}
