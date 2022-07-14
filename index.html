@@ -46,8 +46,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a href="#reservetable"><button class="btn btn-sm btn-warning"><strong>Reserve Table</strong></button></a>
                 </div>
             </div>
         </div>
@@ -81,8 +84,18 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-3">
+                        <h2>
+                            Weekend Grand Buffet
+                            <span class="badge bg-danger">NEW</span>
+                        </h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="img/buffet.png" class="img-thumbnail d-flex ms-3 align-self-center" alt="Buffet">
+                      </div>
+                  </div>
             </div>
         </div>
 
@@ -102,6 +115,60 @@
                     </div>
                   </div>
                
+            </div>
+        </div>
+        <div class="row row-content align-self-center">
+            <div class="col-12 col-sm-6 offset-sm-3 align-self-center">
+                <div class="card" id="reservetable">
+                    <h3 class="card-header bg-warning">Reserve A Table</h3>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numguests" class="col-md-4 col-form-label"><strong>Number of Guests</strong></label>
+                                <div class="col-md-8 justify-content-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option1">
+                                        <label class="form-check-label" for="numguests"><strong>1</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option2">
+                                        <label class="form-check-label" for="numguests"><strong>2</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option3">
+                                        <label class="form-check-label" for="numguests"><strong>3</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option4">
+                                        <label class="form-check-label" for="numguests"><strong>4</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option5">
+                                        <label class="form-check-label" for="numguests"><strong>5</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="numguests" id="numguests" value="option6">
+                                        <label class="form-check-label" for="numguests"><strong>6</strong></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateandtime" class="col-md-4 col-form-label"><strong>Date and Time</strong></label>
+                                <div class="col-md-4">
+                                    <input type="date" class="form-control" id="dateandtime" name="dateandtime" placeholder="Date">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="form-control" id="dateandtime" name="dateandtime" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-4 col-md-8">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
