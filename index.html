@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link active"><span class="fa fa-home fa-lg"></span> Home</a>
                     </li>
@@ -35,10 +35,51 @@
                         <a href="contactus.html" class="nav-link"><span class="fa fa-address-book fa-lg"></span> Contact</a>
                     </li>
                 </ul>
+                <span class="navbar-text ms-auto">
+                    <a data-bs-toggle="modal" data-bs-target="#loginModal" href="#loginModal">
+                        <span class="fa fa-sign-in"> Login </span>
+                    </a>
+                </span>
             </div>
         </div>
        </nav>
 
+       <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="contentinfo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                   <button type="button" class="close" data-bs-dismiss="modal">
+                    &times;
+                   </button> 
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row row">
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInput" class="sr-only">Email</label>
+                                <input type="email" class="form-control form-control-sm me-1" id="exampleInput" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputPasswprd3" class="sr-only">Password</label>
+                                <input type="password" class="form-control form-control-sm me-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="form-group col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label for="exampleInput" class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ms-auto" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ms-1">Sign-in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+       </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -50,7 +91,11 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#reservetable"><button class="btn btn-sm btn-warning"><strong>Reserve Table</strong></button></a>
+                   <a href="#reservetable" class="btn btn-warning nav-link"
+                   data-bs-toggle="tooltip"
+                   data-bs-html="true"
+                   data-bs-placement="bottom"
+                   title="Or Call us at <br><strong>+234 8075200170</strong>">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -215,7 +260,14 @@
         </div>
     </footer>
 
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+       })
+    </script>
 </body>
 
 </html>
