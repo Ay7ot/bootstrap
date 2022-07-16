@@ -122,8 +122,8 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-md-4">Section</label>
-                            <div class="btn-group col-md-8" role="group" aria-label="Basic radio toggle button group">
+                            <label class="col-md-4"><strong>Section</strong></label>
+                            <div class="btn-group col-md-4" role="group" aria-label="Basic radio toggle button group">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                                 <label class="btn btn-success" for="btnradio1">Non-smoking</label>
                               
@@ -219,6 +219,14 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,10 +338,15 @@
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-       })
+        $(document).ready(function(){
+            $('#mycarousel').carousel({ interval: 2000});
+            $('#carousel-pause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function(){
+                $('#mycarousel').carousel('cycle');
+            })
+        })
     </script>
 </body>
 
